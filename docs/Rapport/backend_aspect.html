@@ -1,0 +1,184 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>GPC - Backend</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="index.html" class="logo"><strong>Backend / Engineering Aspect</strong></a>
+									<ul class="icons">
+										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+										<li><a href="#" class="icon brands fa-snapchat-ghost"><span class="label">Snapchat</span></a></li>
+										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+										<li><a href="#" class="icon brands fa-medium-m"><span class="label">Medium</span></a></li>
+									</ul>
+								</header>
+
+							<!-- Content -->
+								<section>
+									<header class="main">
+										<h1>Technologies Used</h1>
+									</header>
+
+									
+									<p>To develop the Game Price Comparison App, a combination of modern programming languages, frameworks, and tools were utilized to ensure efficiency, scalability, and a smooth user experience. These technologies were carefully chosen to meet the requirements of the project, such as dynamic data fetching, responsive design, and seamless integration with external APIs. Below is an overview of the technologies used:</p>
+									<hr class="major" />
+
+									<h2>Programming Language</h2>
+									<p><strong>Java</strong>
+									<br/> 
+									The app is primarily developed using Java</p>
+									<hr class="major" />
+
+									<h2>Framworks and Libraries</h2>
+									<p><strong>Android SDK</strong>
+										<br/> 
+										The core framework for building Android apps, providing essential tools for UI design, interaction, and data management.
+									</p>
+									<p><strong>Picasso</strong>
+										<br/> 
+										A powerful image loading library for Android, used to display game cover images efficiently and handle image caching.
+									</p>
+									<p><strong>SAX Parser</strong>
+										<br/> 
+										Used for parsing XML data in a lightweight manner to fetch and interpret API responses.
+									</p>
+									
+									<hr class="major" />
+
+									<h2>APIs</h2>
+									<p><strong>Steam API</strong>
+										<br/> 
+										The Steam Web API provides access to game details, including prices, descriptions, and app IDs.
+									</p>
+									<p><strong>IsThereAnyDeal API</strong>
+										<br/> 
+										Retrieves price data from various third-party platforms to offer the best deals for games.
+									</p>
+									
+									<h2>Other Tools</h2>
+									<p><strong>GitHub Pages</strong>
+										<br/>
+										<strong>Gradle</strong>
+									</p>
+									
+								</section>
+								<section>
+									<header class="main">
+										<h1>Implementation Details</h1>
+									</header>
+									<hr class="major" />
+									<h2>Architecture</h2>
+									<p>
+										The application follows a modular architecture, separating concerns across different classes to ensure maintainability and scalability. Key components include:
+									</p>
+									<p><strong>MainActivity</strong>
+									<br/> 
+									Serves as the entry point of the app and manages user interactions. It initializes the UI elements and handles click events for the "Compare Prices" functionality.
+									</p>
+									<p><strong>GamePrice</strong>
+										<br/> 
+										Represents the data model for games, encapsulating information such as the game title, price, description, and cover image.
+									</p>
+									<p><strong>NetworkUtils</strong>
+										<br/> 
+										Handles all network-related operations, such as making API calls to fetch game details and parsing responses. This class ensures efficient and error-handling-compliant communication with external APIs.
+									</p>
+									<p><strong>MyRSSsaxHandler</strong>
+										<br/> 
+										Implements SAX parsing to process XML data retrieved from APIs, providing a lightweight and fast solution for parsing structured data.
+									</p>
+
+									<h2>Data Fetching and Display</h2>
+								
+									<p><strong>Fetching</strong>
+									<br/> 
+									When a user enters a game name and clicks "Compare Prices," the app triggers network requests via NetworkUtils to external APIs (e.g., Steam API, IsThereAnyDeal API).
+These APIs return data in JSON or XML format, which is then processed by the respective parsers.</p>
+									<p><strong>Parsing</strong>
+										<br/> 
+										JSON responses are parsed into Java objects for easy manipulation.
+For XML data, the MyRSSsaxHandler processes the response and extracts the required fields.</p>
+									<p><strong>Displaying</strong>
+										<br/> 
+										The parsed data is passed back to the MainActivity, where it updates the UI elements such as game title, prices, and cover image using tools like Picasso.
+									</p>
+
+									<h2>Data Flow</h2>
+								
+									<p><strong>Input</strong>
+										<br/> 
+										User enters a game name and clicks the "Compare Prices" button.
+									<p><strong>Network Request</strong>
+										<br/> 
+										API responses are parsed into usable data formats (e.g., Java objects).
+									<p><strong>Data Parsing</strong>
+										<br/> 
+										API responses are parsed into usable data formats (e.g., Java objects).
+									</p>
+									<p><strong>UI Update</strong>
+										<br/> 
+										The app updates UI components in MainActivity with the retrieved data.
+									</p>
+								</section>
+
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+
+							<!-- Search -->
+								<section id="search" class="alt">
+									<form method="post" action="#">
+										<input type="text" name="query" id="query" placeholder="Search" />
+									</form>
+								</section>
+
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<ul>
+										<li><a href="index.html">Introduction</a></li>
+										<li><a href="backend_aspect.html">backend Aspect</a></li>
+									</ul>
+								</nav>
+										
+										
+							
+
+						</div>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
