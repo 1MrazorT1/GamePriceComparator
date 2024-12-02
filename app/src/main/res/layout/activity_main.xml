@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_launcher_background_black"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <!-- Input for game name -->
+    <EditText
+        android:id="@+id/gameInput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter Game Name"
+        android:inputType="text"
+        android:padding="12dp"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Compare Prices Button -->
+    <Button
+        android:id="@+id/compareButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#D32F2F"
+        android:paddingHorizontal="24dp"
+        android:paddingVertical="12dp"
+        android:text="Compare Prices"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/gameInput" />
+
+    <!-- Game Title -->
+    <TextView
+        android:id="@+id/gameTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Game Title:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/compareButton" />
+
+    <!-- Steam Price -->
+    <TextView
+        android:id="@+id/steamPrice"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Steam Price:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#E0E0E0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/gameTitle" />
+
+    <!-- Third Party Price -->
+    <TextView
+        android:id="@+id/steamPrice2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Game overview:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#E0E0E0"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/minPrice" />
+
+    <!-- Third Party Best Price -->
+    <TextView
+        android:id="@+id/dealPrice"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Third Party Best Current Price:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#E0E0E0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/steamPrice" />
+
+    <!-- Minimum Price -->
+    <TextView
+        android:id="@+id/minPrice"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Minimum Price:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#E0E0E0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dealPrice" />
+
+    <!-- Image View for Game Cover -->
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="68dp"
+        android:contentDescription="Game Cover"
+        android:scaleType="centerCrop"
+        app:layout_constraintDimensionRatio="460:215"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/minPrice"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <!-- Game Description -->
+    <TextView
+        android:id="@+id/gameDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text=""
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="#E0E0E0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageView" />
+
+    <TextView
+        android:id="@+id/footer"
+        android:layout_width="379dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="© 2024 Games Price Comparator by MT. All rights reserved."
+        android:textColor="#808080"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gameDescription"
+        app:layout_constraintVertical_bias="0.798" />
+</androidx.constraintlayout.widget.ConstraintLayout>
